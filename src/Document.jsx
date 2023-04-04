@@ -334,13 +334,7 @@ export default class Document extends PureComponent {
     const { className, inputRef } = this.props;
 
     return (
-      <div
-        className={mergeClassNames('react-pdf__Document', className)}
-        ref={inputRef}
-        {...this.eventProps}
-      >
-        {this.renderContent()}
-      </div>
+      <>{this.renderContent()}</>
     );
   }
 }
