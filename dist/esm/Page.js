@@ -350,7 +350,7 @@ export var PageInternal = /*#__PURE__*/function (_PureComponent) {
       var children = this.props.children;
       return /*#__PURE__*/React.createElement(PageContext.Provider, {
         value: this.childContext
-      }, this.renderMainLayer(), this.renderTextLayer(), this.renderAnnotationLayer(), children);
+      }, this.renderMainLayer(), this.renderTextLayer(), children);
     }
   }, {
     key: "renderContent",

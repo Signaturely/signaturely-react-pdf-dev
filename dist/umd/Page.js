@@ -384,7 +384,7 @@ var PageInternal = /*#__PURE__*/function (_PureComponent) {
       var children = this.props.children;
       return /*#__PURE__*/_react["default"].createElement(_PageContext["default"].Provider, {
         value: this.childContext
-      }, this.renderMainLayer(), this.renderTextLayer(), this.renderAnnotationLayer(), children);
+      }, this.renderMainLayer(), this.renderTextLayer(), children);
     }
   }, {
     key: "renderContent",
