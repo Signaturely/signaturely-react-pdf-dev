@@ -9,8 +9,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = exports.AnnotationLayerInternal = void 0;
 
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
@@ -207,11 +205,16 @@ AnnotationLayerInternal.propTypes = {
 };
 
 var AnnotationLayer = function AnnotationLayer(props) {
-  return /*#__PURE__*/_react["default"].createElement(_DocumentContext["default"].Consumer, null, function (documentContext) {
-    return /*#__PURE__*/_react["default"].createElement(_PageContext["default"].Consumer, null, function (pageContext) {
-      return /*#__PURE__*/_react["default"].createElement(AnnotationLayerInternal, (0, _extends2["default"])({}, documentContext, pageContext, props));
-    });
-  });
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null) // <DocumentContext.Consumer>
+  //   {(documentContext) => (
+  //     <PageContext.Consumer>
+  //       {(pageContext) => (
+  //         <AnnotationLayerInternal {...documentContext} {...pageContext} {...props} />
+  //       )}
+  //     </PageContext.Consumer>
+  //   )}
+  // </DocumentContext.Consumer>
+  ;
 };
 
 var _default = AnnotationLayer;

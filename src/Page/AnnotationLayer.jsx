@@ -145,15 +145,16 @@ AnnotationLayerInternal.propTypes = {
 };
 
 const AnnotationLayer = (props) => (
-  <DocumentContext.Consumer>
-    {(documentContext) => (
-      <PageContext.Consumer>
-        {(pageContext) => (
-          <AnnotationLayerInternal {...documentContext} {...pageContext} {...props} />
-        )}
-      </PageContext.Consumer>
-    )}
-  </DocumentContext.Consumer>
+  <></>
+  // <DocumentContext.Consumer>
+  //   {(documentContext) => (
+  //     <PageContext.Consumer>
+  //       {(pageContext) => (
+  //         <AnnotationLayerInternal {...documentContext} {...pageContext} {...props} />
+  //       )}
+  //     </PageContext.Consumer>
+  //   )}
+  // </DocumentContext.Consumer>
 );
 
 export default AnnotationLayer;

@@ -1,4 +1,3 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
 import _classCallCheck from "@babel/runtime/helpers/esm/classCallCheck";
 import _createClass from "@babel/runtime/helpers/esm/createClass";
 import _assertThisInitialized from "@babel/runtime/helpers/esm/assertThisInitialized";
@@ -182,11 +181,16 @@ AnnotationLayerInternal.propTypes = {
 };
 
 var AnnotationLayer = function AnnotationLayer(props) {
-  return /*#__PURE__*/React.createElement(DocumentContext.Consumer, null, function (documentContext) {
-    return /*#__PURE__*/React.createElement(PageContext.Consumer, null, function (pageContext) {
-      return /*#__PURE__*/React.createElement(AnnotationLayerInternal, _extends({}, documentContext, pageContext, props));
-    });
-  });
+  return /*#__PURE__*/React.createElement(React.Fragment, null) // <DocumentContext.Consumer>
+  //   {(documentContext) => (
+  //     <PageContext.Consumer>
+  //       {(pageContext) => (
+  //         <AnnotationLayerInternal {...documentContext} {...pageContext} {...props} />
+  //       )}
+  //     </PageContext.Consumer>
+  //   )}
+  // </DocumentContext.Consumer>
+  ;
 };
 
 export default AnnotationLayer;
