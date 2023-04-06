@@ -304,7 +304,7 @@ export class PageInternal extends PureComponent {
       <PageContext.Provider value={this.childContext}>
         {this.renderMainLayer()}
         {this.renderTextLayer()}
-        {this.renderAnnotationLayer()}
+        {/* {this.renderAnnotationLayer()} */}
         {children}
       </PageContext.Provider>
     );
